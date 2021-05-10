@@ -2,3 +2,27 @@
 .yellow {
   background-color: rgb(236, 236, 54);
 }
+
+textarea {
+  resize: none;
+  border: none;
+  box-shadow: none;
+}
+
+.square {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
+}
+
+.deleteButton {
+  justify-self: end;
+  align-items: start;
+}
+
+.plus {
+  transform: rotate(45deg);
+  place-self: center;
+}
