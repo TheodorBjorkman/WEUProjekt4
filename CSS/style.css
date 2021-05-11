@@ -9,6 +9,12 @@
   background-color: rgb(236, 236, 54);
 }
 
+.titel {
+  border-style: none;
+  box-shadow: none;
+  width: minmax(180px, 200);
+}
+
 textarea {
   resize: none;
   border: none;
@@ -17,8 +23,14 @@ textarea {
 
 .square {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--min-fill), var(--max-fill)));
-  grid-template-rows: repeat(auto-fill, minmax(calc(var(--min-fill) + 50px), var(--max-fill)));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--min-fill), var(--max-fill))
+  );
+  grid-template-rows: repeat(
+    auto-fill,
+    minmax(calc(var(--min-fill) + 50px), var(--max-fill))
+  );
   grid-column-gap: 5px;
   grid-row-gap: 5px;
 }
