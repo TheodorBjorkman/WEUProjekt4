@@ -1,8 +1,7 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
 
 :root {
-  --max-fill: 1fr;
-  --min-fill: 200px;
+  --min-fill: 240px;
 }
 
 .color {
@@ -25,11 +24,11 @@ textarea {
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
-    minmax(var(--min-fill), var(--max-fill))
+    minmax(var(--min-fill), 1fr)
   );
   grid-template-rows: repeat(
     auto-fill,
-    minmax(calc(var(--min-fill) + 50px), var(--max-fill))
+    minmax(calc(var(--min-fill) + 50px), 1fr)
   );
   grid-column-gap: 5px;
   grid-row-gap: 5px;
@@ -53,4 +52,13 @@ textarea {
   max-height: var(--max-size);
   min-width: var(--min-size);
   min-height: var(--min-size);
+}
+
+.transparent {
+  opacity: 0;
+  height: 15.625rem;
+}
+
+.fill {
+  height: ;
 }

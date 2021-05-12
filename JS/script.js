@@ -1,27 +1,17 @@
-import { mdiFormatListBulleted } from '@mdi/js';
-
 function deleteNote() {
     document.activeElement.parentElement.remove();
 }
 
 function createNote() {
-    newNote = constructNote();
+    newNote = new Note;
     document.getElementById("plus").insertAdjacentElement("beforebegin", newNote);
 }
 
-function constructNote() {
-    const newNote = constructNoteBody();
-    const textbox = constructNoteTextbox();
-    const deleteButton = constructDeleteButton();
-    newNote.appendChild(textbox);
-    newNote.appendChild(deleteButton);
-    return newNote;
-}
-
-function constructNoteBody() {
+function constructNoteBody(noteID) {
     const newNote = document.createElement("div");
-    const noteClasses = "box yellow";
+    const noteClasses = "box yellow fill";
     newNote.classList = noteClasses;
+    newNote.id = noteID;
     return newNote;
 }
 
@@ -32,12 +22,37 @@ function constructNoteTextbox() {
     return textbox;
 }
 
-function constructDeleteButton() {
-    const deleteButton = document.createElement("button");
-    const delButtAttr = document.createAttribute("onclick");
-    const delButtClasses = "delete";
-    delButtAttr.value = "deleteNote()";
-    deleteButton.classList = delButtClasses;
-    deleteButton.setAttributeNode(delButtAttr);
-    return deleteButton;
+function constructTag(tagType, tagClass, tagAttrType, tagAttrVal, inputType) {
+    const tag = document.createElement(tagType);
+    const tagAttr = document.createAttribute(tagAttrType);
+    tagAttr.value = tagAttrVal;
+    tag.classList = tagClass;
+    tag.setAttributeNode(tagAttr);
+    return tag;
+}
+
+function formatUnorderedList() {
+
+}
+
+function formatOrderedList() {
+
+}
+
+function formatNoList() {
+
+}
+
+class Note {
+    constructor() {
+        const newNote = constructNoteBody(Date.now());
+        const textbox = constructNoteTextbox();
+        const tagCont = constructTag("div", "tags has-addons");
+        const delButt = constructTag("button", "tag delete is-medium is-danger", "onclick", "deleteNote()");
+        const colPick = constructTag("input")
+        tagCont.appendChild(tags)
+        newNote.appendChild(tagCont);
+        newNote.appendChild(textbox);
+        return newNote;
+    }
 }
