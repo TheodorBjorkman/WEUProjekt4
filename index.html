@@ -4,13 +4,28 @@
     <link rel="stylesheet" href="CSS/style.css" />
     <meta charset="UTF-8" />
     <script src="JS/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/393f0d4532.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
   </head>
   <body>
     <div class="square">
-      <div class="box yellow">
-        <input type="input" class="box yellow titel" placeholder="Title" />
-        <button class="delete" onclick="deleteNote()"></button>
+      <div class="box color">
+        <div class="tags has-addons">
+          <button
+            class="tag delete is-medium is-danger"
+            onclick="deleteNote()"
+          ></button>
+          <input type="color" class="tag is-primary" />
+          <input
+            type="button"
+            class="tag is-primary mdi mdi-format-list-bulleted"
+          />
+          <span> <i class="fas fa-list"></i></span>
+        </div>
+        <input type="input" class="box color titel" placeholder="Title" />
       </div>
       <button class="delete" id="plus" onclick="createNote()"></button>
     </div>

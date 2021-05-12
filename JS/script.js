@@ -1,3 +1,5 @@
+import { mdiFormatListBulleted } from '@mdi/js';
+
 function deleteNote() {
     document.activeElement.parentElement.remove();
 }
