@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="square">
-      <div class="box color">
+      <div class="box color note">
         <div class="tags has-addons">
           <button
             class="tag delete is-medium is-danger"
@@ -23,10 +23,11 @@
           <i class="fas fa-list tag button" onclick="formatUnorderedList()"></i>
           <i class="fas fa-list-ol tag button" onclick="formatOrderedList()"></i>
         </div>
-        <input type="input" class="box color titel" placeholder="Title" />
+        <textarea class="fill box"></textarea>
       </div>
+      <div class="note" id="empty">
       <button class="delete" id="plus" onclick="createNote()"></button>
-      <div class="box transparent"></div>
+      </div>
     </div>
   </body>
 </html>

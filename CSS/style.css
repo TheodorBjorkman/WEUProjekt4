@@ -8,12 +8,6 @@
   background-color: rgb(236, 236, 54);
 }
 
-.titel {
-  border-style: none;
-  box-shadow: none;
-  width: minmax(180px, 200);
-}
-
 textarea {
   resize: none;
   border: none;
@@ -32,6 +26,8 @@ textarea {
   );
   grid-column-gap: 5px;
   grid-row-gap: 5px;
+  justify-content: center;
+  align-content: center;
 }
 
 .deleteButton {
@@ -45,20 +41,19 @@ textarea {
 
 #plus {
   --max-size: 1fr;
-  --min-size: 50px;
+  --min-size: 500px;
   transform: rotate(45deg);
   place-self: center;
-  max-width: var(--max-size);
-  max-height: var(--max-size);
-  min-width: var(--min-size);
-  min-height: var(--min-size);
+  width: var(--min-size);
+  height: var(--min-size);
 }
 
-.transparent {
-  opacity: 0;
-  height: 15.625rem;
+.note {
+  width: 240px;
+  height: 290px;
 }
 
-.fill {
-  height: ;
+#empty {
+  display: flex;
+  justify-content: center;
 }
