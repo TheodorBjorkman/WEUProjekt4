@@ -5,6 +5,7 @@ const LOCAL_STORAGE_KEY_NOTES = "app.notes";
 function start() {
     storedNotes = fetchLocal();
     if (!storedNotes || storedNotes.length < 1) {
+        storedNotes = [];
         createNote();
         return;
     }
