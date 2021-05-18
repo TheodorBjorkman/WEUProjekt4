@@ -128,9 +128,6 @@ function note(id, color, content) {
     const tags = [];
     tags.push(constructTag("button", "tag delete is-medium is-danger", "onclick", `deleteNote(${id})`));
     tags.push(constructTag("input", "tag", "onchange", `changeNoteColor(${id})`, "color", `${color}`, `colorChanger${id}`));
-    // tags.push(constructTag("i", "fas fa-align-justify tag button", "onclick", `formatNoList(${id})`));
-    // tags.push(constructTag("i", "fas fa-list tag button", "onclick", `formatUnorderedList(${id})`));
-    // tags.push(constructTag("i", "fas fa-list-ol tag button", "onclick", `formatOrderedList(${id})`));
     for (let index = 0; index < tags.length; index++) {
         const curTag = tags[index];
         tagCont.appendChild(curTag);
@@ -155,15 +152,3 @@ function saveText(id) {
         }
     }
 }
-
-// function formatUnorderedList(id) {
-
-// }
-
-// function formatOrderedList(id) {
-
-// }
-
-// function formatNoList(id) {
-
-// }
